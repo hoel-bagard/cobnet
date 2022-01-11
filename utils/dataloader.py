@@ -161,7 +161,7 @@ class CobDataLoader(Dataset):
                         np.uint8)
                     or_cntr = sparse.csr_matrix(or_cntr)
                     sparse.save_npz(
-                        pjoin(self.or_cntr_path, s['fname'] + '.npz'), or_cntr)
+                        pjoin(self.or_cntr_path, s['base_name'] + '.npz'), or_cntr)
 
     def __len__(self):
         return len(self.dl)
