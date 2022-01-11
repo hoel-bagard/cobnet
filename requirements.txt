@@ -1,0 +1,9 @@
+scipy
+imgaug
+tqdm
+imgaug
+sklearn
+tensorboardX
+higra
+torchvision
+configargparse
