@@ -293,7 +293,7 @@ def train(cfg, model, device, dataloaders, run_path, writer):
 
         # write losses to tensorboard
         model.eval()
-        val(model, dataloaders['train'], device, mode, writer, epoch)
+        val(model, dataloaders['train_fs'], device, mode, writer, epoch)
 
 
 def main(cfg):
