@@ -6,6 +6,7 @@ import urllib.request
 from os.path import join as pjoin
 
 import configargparse
+import cv2
 import numpy as np
 from models.cobnet import CobNet
 import torch
@@ -64,3 +65,11 @@ if __name__ == "__main__":
         plt.subplot(133)
         plt.imshow(res['y_coarse'].sigmoid().squeeze().cpu().detach().numpy())
         plt.show()
+
+        img_fine = res['y_fine'].sigmoid().squeeze().cpu().detach().numpy()*255
+        img_fine = cv2.cvtColor(img_fine, cv2.COLOR_GRAY2BGR).astype(np.uint8)
+        img_coarse = res['y_coarse'].sigmoid().squeeze().cpu().detach().numpy()*255
+        img_coarse = cv2.cvtColor(img_coarse, cv2.COLOR_GRAY2BGR).astype(np.uint8)
+        # im_orig = cv2.resize(im_orig, img_fine.shape[::-1])
+        all_imgs = cv2.hconcat([im_orig, img_fine, img_coarse])
+        cv2.imwrite(outp, all_imgs)
