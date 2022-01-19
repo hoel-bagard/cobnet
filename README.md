@@ -67,3 +67,8 @@ Once the training is finished, you can run the inference on your own images with
 ```
 python eval_cob.py --model-path results/checkpoints/cp_or.pth.tar --in-path in/ --out-path out/
 ```
+
+You can find the results of the train I did in the [results folder](/results/). The outputs look like this:
+| Airplane | Dogs |
+|    :---:      |     :---:     |
+| ![airplane](/results/2007_000033.jpg?raw=true "Airplane") | ![dog](/results/dog.jpg?raw "Dogs")|
