@@ -69,6 +69,6 @@ python eval_cob.py --model-path results/checkpoints/cp_or.pth.tar --in-path in/ 
 ```
 
 You can find the results of the train I did in the [results folder](/results/). The outputs look like this:
-| Airplane | Dogs |
+| Airplane | ![airplane](/results/2007_000033.jpg?raw=true "Airplane") |
 |    :---:      |     :---:     |
-| ![airplane](/results/2007_000033.jpg?raw=true "Airplane") | ![dog](/results/dog.jpg?raw "Dogs")|
+| Dogs | ![dog](/results/dog.jpg?raw "Dogs")|
